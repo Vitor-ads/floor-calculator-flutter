@@ -23,6 +23,10 @@ class CalculatorController {
     floor.length = ParseHelper.toDouble(value);
   }
 
+  void setFloorPrice(String value) {
+    floor.price = ParseHelper.toDouble(value);
+  }
+
   ResultModel calculate() {
     final result = new ResultModel();
     result.piecesByWidth = (room.width / floor.width).ceil();
