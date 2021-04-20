@@ -64,6 +64,8 @@ class _CalculatorPageState extends State<CalculatorPage> {
           ),
           _buildVerticalSpace(height: 40),
           _buildCalculateButton(),
+          _buildVerticalSpace(height: 40),
+          _buildClearButton(),
         ],
       ),
     );
@@ -117,5 +119,18 @@ class _CalculatorPageState extends State<CalculatorPage> {
         builder: (context) => ResultDialog(result),
       );
     }
+  }
+
+  _buildClearButton() {
+    return RaisedButton(
+      child: const Text('Limpar'),
+      onPressed: _clearFields,
+    );
+  }
+
+  void _clearFields() {
+    setState(() {
+      _formKey.currentState.reset();
+    });
   }
 }
