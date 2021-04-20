@@ -33,6 +33,10 @@ class ResultDialog extends StatelessWidget {
             title: Text('${result.areaWithFooter.toStringAsFixed(2)} m²'),
             subtitle: Text('Metragem quadrada com rodapé'),
           ),
+          ListTile(
+            title: Text('R\$${result.totalPrice.toStringAsFixed(2)}'),
+            subtitle: Text('preço total do piso com rodapé'),
+          ),
         ],
       ),
       actions: [

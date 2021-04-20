@@ -29,9 +29,10 @@ class CalculatorController {
 
   ResultModel calculate() {
     final result = new ResultModel();
-    result.piecesByWidth = (room.width / floor.width).ceil();
-    result.piecesByLength = (room.length / floor.length).ceil();
+    result.piecesByWidth = (room.width / (floor.width / 100)).ceil();
+    result.piecesByLength = (room.length / (floor.length / 100)).ceil();
     result.areaFloor = floor.length * floor.width;
+    result.priceByPiece = floor.width * floor.length * 0.0001;
     return result;
   }
 }

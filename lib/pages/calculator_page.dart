@@ -59,7 +59,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
           ),
           _buildVerticalSpace(),
           _buildNumberInputField(
-            'Praço (reais)',
+            'Preço (reais/m²)',
             onSaved: _controller.setFloorPrice,
           ),
           _buildVerticalSpace(height: 40),
